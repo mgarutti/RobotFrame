@@ -59,13 +59,11 @@ Open Website
     #Click Link  ${MENU_ABOUT}
     Click Link  ${MENU_CONTACT}
     Click Element    ${SUBSCRIBE}
-    ${WINDOW}=      Get Window Handles
-    Log To Console    ${WINDOW}
+    Select Window   NEW
 
 
 Fill The Form
 
-    Go To   ${FORM_PAGE}
     Wait Until Page Contains Element    ${EMAIL_LOC}    timeout=50.0
     ${EMAIL}=   Email
     ${FIRST_NAME}=    First Name
